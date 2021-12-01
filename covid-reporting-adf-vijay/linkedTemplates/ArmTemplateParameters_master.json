@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid-reporting-adf-vijay"
+		},
+		"ls_ablob_covidreportingsa18_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdlsa18_accountKey": {
+			"value": ""
+		},
+		"ls_azure_sql_covid_db_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdlsa18_properties_typeProperties_url": {
+			"value": "https://covidreportingdlsa18.dfs.core.windows.net/"
+		},
+		"ls_http_opendata_ecdc_europe_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
+		"tr_ingest_population_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/f4044403-9f31-4882-9400-88a96284392d/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidreportingsa18"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
