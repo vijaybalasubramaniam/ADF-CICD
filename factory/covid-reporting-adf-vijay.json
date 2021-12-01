@@ -1,0 +1,9 @@
+{
+	"name": "covid-reporting-adf-vijay",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c7f6cc7e-f6c1-4dda-89bb-a44f93d4a52c",
+		"tenantId": "231f4532-b885-474f-b8f9-35276034ccb7"
+	}
+}
