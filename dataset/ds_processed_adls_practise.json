@@ -1,0 +1,24 @@
+{
+	"name": "ds_processed_adls_practise",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_raw_practise",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Test",
+				"fileSystem": "processed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

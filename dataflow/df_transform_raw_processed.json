@@ -1,0 +1,32 @@
+{
+	"name": "df_transform_raw_processed",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_raw_adls_practise",
+						"type": "DatasetReference"
+					},
+					"name": "sourcerawadls"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_processed_adls_practise",
+						"type": "DatasetReference"
+					},
+					"name": "sinkProcessedPractise"
+				}
+			],
+			"transformations": [
+				{
+					"name": "AlterRow1"
+				}
+			],
+			"script": "source(output(\n\t\tempno as short,\n\t\tename as string,\n\t\tjob as string,\n\t\tsal as short\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinferDriftedColumnTypes: true,\n\tignoreNoFilesFound: false) ~> sourcerawadls\nsourcerawadls alterRow(upsertIf(true())) ~> AlterRow1\nAlterRow1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\ttruncate: true,\n\tumask: 0022,\n\tpreCommands: [],\n\tpostCommands: [],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sinkProcessedPractise"
+		}
+	}
+}

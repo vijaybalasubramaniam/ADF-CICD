@@ -1,0 +1,9 @@
+{
+	"name": "vijay-adf-practise",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "03b1ac27-eabf-4950-a32a-08bbe25eecc1",
+		"tenantId": "231f4532-b885-474f-b8f9-35276034ccb7"
+	}
+}
